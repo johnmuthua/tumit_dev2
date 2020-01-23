@@ -7,4 +7,4 @@ env:
 install:
   - pip install -r backend/requirements.txt
 script:
-  - python backend/manage.py test
+  - python manage.py test
