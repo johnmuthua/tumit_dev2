@@ -33,4 +33,5 @@ before_script:
 
 script:
   - python manage.py migrate
-  - python manage.py test 
+  - python ./tumit_dev/manage.py syncdb
+  - python ./tumit_dev/manage.py test
