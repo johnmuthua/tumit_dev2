@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from .import Profile
 
 
 class Meet(models.Model):
@@ -28,13 +29,12 @@ class Meet(models.Model):
     likes = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
-    ufullname = models.CharField(max_length=200, blank=True, null=True)
+    u_name = models.CharField(max_length=50, blank=True, null=True)
 
     # TODO create custom method to fill fullname
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        fullname = User.first_name + " " + User.last_name
-        self.ufullname = fullname
-        super(Meet, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     self.u_name = str(Profile.qu)
+    #     super(Meet, self).save(*args, **kwargs)
