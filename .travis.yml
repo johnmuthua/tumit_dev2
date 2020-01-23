@@ -32,6 +32,6 @@ before_script:
   - sleep 3
 
 script:
-  - python manage.py migrate
+  - python ./tumit_dev/manage.py migrate
   - python ./tumit_dev/manage.py syncdb
   - python ./tumit_dev/manage.py test
