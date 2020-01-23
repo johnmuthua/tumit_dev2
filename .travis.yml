@@ -4,4 +4,4 @@ python:
 env:
   - DJANGO_VERSION=3.0.2
 script:
-  - python src/backend/manage.py test
+  - python backend/manage.py test
